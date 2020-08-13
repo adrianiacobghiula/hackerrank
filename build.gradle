@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'aig'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.6.2')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.6.2')
+
+    testImplementation("org.assertj:assertj-core:3.16.1")
+}
+
+test {
+    useJUnitPlatform()
+}
