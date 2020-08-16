@@ -1,5 +1,8 @@
 package aig.hackerrank.interview_preparation_kit.sorting;
 
+/*
+https://www.hackerrank.com/challenges/ctci-bubble-sort
+ */
 public class BubbleSort {
   void countSwaps(int[] a) {
     int numSwaps = 0;
