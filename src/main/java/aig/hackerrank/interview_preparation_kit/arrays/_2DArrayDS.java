@@ -1,5 +1,8 @@
 package aig.hackerrank.interview_preparation_kit.arrays;
 
+/*
+https://www.hackerrank.com/challenges/2d-array/problem
+ */
 public class _2DArrayDS {
 
   public int hourglassSum(int[][] arr) {

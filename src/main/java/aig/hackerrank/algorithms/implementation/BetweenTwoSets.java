@@ -3,7 +3,7 @@ package aig.hackerrank.algorithms.implementation;
 import java.util.List;
 
 /*
-https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+https://www.hackerrank.com/challenges/between-two-sets/problem
  */
 public class BetweenTwoSets {
 

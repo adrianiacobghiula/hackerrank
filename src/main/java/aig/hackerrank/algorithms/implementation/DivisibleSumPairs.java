@@ -1,5 +1,8 @@
 package aig.hackerrank.algorithms.implementation;
 
+/*
+https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
+ */
 public class DivisibleSumPairs {
   int divisibleSumPairs(int n, int k, int[] ar) {
     int cnt = 0;
