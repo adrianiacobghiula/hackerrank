@@ -1,5 +1,8 @@
 package aig.hackerrank.interview_preparation_kit.search;
 
+/*
+https://www.hackerrank.com/challenges/making-candies
+ */
 public class MakingCandies {
 
   private long m;

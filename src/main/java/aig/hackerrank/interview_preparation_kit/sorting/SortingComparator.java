@@ -1,5 +1,8 @@
 package aig.hackerrank.interview_preparation_kit.sorting;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
 import java.util.Comparator;
 
 /*
@@ -7,22 +10,11 @@ https://www.hackerrank.com/challenges/ctci-comparator-sorting
  */
 public class SortingComparator {
 
+  @Getter
+  @RequiredArgsConstructor
   static class Player {
-    String name;
-    int score;
-
-    Player(String name, int score) {
-      this.name = name;
-      this.score = score;
-    }
-
-    public String getName() {
-      return name;
-    }
-
-    public int getScore() {
-      return score;
-    }
+    private final String name;
+    private final int score;
   }
 
   static class Checker implements Comparator<Player> {
