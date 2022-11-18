@@ -21,12 +21,12 @@ public class MakingAnagrams {
     HashSet<Integer> allChars = new HashSet<>();
     allChars.addAll(freqA.keySet());
     allChars.addAll(freqB.keySet());
-    int diff = 0;
+    long diff = 0;
     for (Integer c : allChars) {
       Long aCharCount = Objects.isNull(freqA.get(c)) ? 0L : freqA.get(c);
       Long bCharCount = Objects.isNull(freqB.get(c)) ? 0L : freqB.get(c);
       diff += Math.abs(aCharCount - bCharCount);
     }
-    return diff;
+    return (int) diff;
   }
 }
