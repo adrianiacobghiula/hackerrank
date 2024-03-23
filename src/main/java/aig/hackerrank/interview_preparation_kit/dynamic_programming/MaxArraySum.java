@@ -9,7 +9,7 @@ public class MaxArraySum {
       return max3(safeIndex(arr, 0), safeIndex(arr, 1), safeIndex(arr, 0) + safeIndex(arr, 2));
     }
 
-    int[] max = new int[arr.length];
+    int[] max = new int[4];
 
     max[0] = safeIndex(arr, 0);
     max[1] = safeIndex(arr, 1);
@@ -18,16 +18,21 @@ public class MaxArraySum {
     for (int i = 3; i < arr.length; i++) {
       int val = Math.max(arr[i], 0);
 
-      max[i] = max3(max[i - 1], val + max[i - 2], val + max[i - 3]);
+      max[circle3(i)] = max3(max[circle3(i-1)], val + max[circle3(i-2)], val + max[circle3(i-3)]);
     }
-    return max[max.length - 1];
+    return Math.max(Math.max(max[0], max[1]), Math.max(max[2], max[3]));
   }
 
-  public int safeIndex(int[] arr, int idx) {
+  int safeIndex(int[] arr, int idx) {
     return (idx < 0 || idx >= arr.length) ? 0 : Math.max(arr[idx], 0);
   }
 
-  public int max3(int a, int b, int c) {
+  int max3(int a, int b, int c) {
     return Math.max(Math.max(a, b), c);
   }
+
+  int circle3(int idx) {
+    return idx & 3;
+  }
+
 }
